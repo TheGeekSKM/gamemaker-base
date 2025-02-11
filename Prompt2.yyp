@@ -95,7 +95,7 @@
   "resources":[
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
     {"id":{"name":"input_controller_object","path":"objects/input_controller_object/input_controller_object.yy",},},
-    {"id":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},},
+    {"id":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},},
     {"id":{"name":"rmGame","path":"rooms/rmGame/rmGame.yy",},},
     {"id":{"name":"rmMainMenu","path":"rooms/rmMainMenu/rmMainMenu.yy",},},
     {"id":{"name":"__input_axis_is_directional","path":"scripts/__input_axis_is_directional/__input_axis_is_directional.yy",},},
