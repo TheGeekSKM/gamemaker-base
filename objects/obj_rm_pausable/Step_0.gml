@@ -1,1 +1,1 @@
-if (global.pause) return;
+if (global.vars.pause) return;

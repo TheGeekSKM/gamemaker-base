@@ -177,3 +177,5 @@ function Raise(_event, _data)
     }
     return false;
 }
+
+function RestartEventSystem() { global.EventManager.RemoveAllEvents(); }
