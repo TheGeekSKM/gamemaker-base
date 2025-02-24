@@ -6,7 +6,7 @@
   "name":"scr_seedpod_strings",
   "parent":{
     "name":"Seedpod",
-    "path":"folders/Scripts/Seedpod.yy",
+    "path":"folders/ImportedAssets/Seedpod.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

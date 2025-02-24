@@ -6,7 +6,7 @@
   "name":"input_any_pressed",
   "parent":{
     "name":"23  Other",
-    "path":"folders/Input/23  Other.yy",
+    "path":"folders/ImportedAssets/Input/23  Other.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

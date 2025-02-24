@@ -6,7 +6,7 @@
   "name":"__input_hotswap_tick",
   "parent":{
     "name":"Ticks",
-    "path":"folders/Input/(System)/Ticks.yy",
+    "path":"folders/ImportedAssets/Input/(System)/Ticks.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
