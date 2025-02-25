@@ -1,1 +1,1 @@
-if (global.vars.pause) return;
+if (global.vars.pause and pauseable_FreezeStep) return;
