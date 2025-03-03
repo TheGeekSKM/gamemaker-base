@@ -6,6 +6,13 @@ A modular **GameMaker Studio 2** base project designed to streamline development
 
 To get started, head over to the **[Releases](https://github.com/TheGeekSKM/gamemaker-base/releases)** tab and download the latest `.yymps` file.
 
+## 🚀 Installation
+
+1. Download the latest `.yymps` file from the [Releases](https://github.com/TheGeekSKM/gamemaker-base/releases) tab.
+2. Open **GameMaker Studio 2** and navigate to `Tools > Import Local Package`.
+3. Select the downloaded `.yymps` file and import the necessary assets.
+4. Start building your game with a **fully functional base project**!
+
 ## 📌 Features
 
 ### **1. Gooey (UI System)**
@@ -55,13 +62,6 @@ A **publish-subscribe (pub-sub) event system** for:
 - Raising and handling game-wide events
 - Decoupling logic for cleaner code
 - Allowing objects to subscribe to specific events without direct dependencies
-
-## 🚀 Installation
-
-1. Download the latest `.yymps` file from the [Releases](https://github.com/TheGeekSKM/gamemaker-base/releases) tab.
-2. Open **GameMaker Studio 2** and navigate to `Tools > Import Local Package`.
-3. Select the downloaded `.yymps` file and import the necessary assets.
-4. Start building your game with a **fully functional base project**!
 
 ## 📜 License
 This project is open-source and available under the **MIT License**. Feel free to use, modify, and contribute.
