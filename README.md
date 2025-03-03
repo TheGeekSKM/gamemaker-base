@@ -34,6 +34,7 @@ A powerful text-rendering extension that allows:
 - Typewriter effects and animated text
 
 ### **4. Seedpod (Utility Library)**
+***NOTE:*** I added some custom functions to the top of the SeedPod file that I use regularly (RoomToGuiCoords)
 A collection of utility functions to simplify development:
 - Math and vector operations
 - Randomization helpers
