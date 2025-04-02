@@ -1,4 +1,4 @@
-function vars() constructor {
+function Vars() constructor {
 	pause = false;
 	
 	function PauseGame(_id) {
@@ -12,4 +12,4 @@ function vars() constructor {
 	}
 }
 
-global.vars = new vars();
+global.vars = new Vars();
