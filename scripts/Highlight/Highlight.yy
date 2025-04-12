@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Highlight",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Highlight",
+  "parent":{
+    "name":"MouseInteraction",
+    "path":"folders/ImportedAssets/MouseInteraction.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

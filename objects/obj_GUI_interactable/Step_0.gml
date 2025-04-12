@@ -1,0 +1,1 @@
+if (obj_Mouse.currentInteractable != id) currentState = ButtonState.Idle;
