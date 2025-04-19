@@ -1,18 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"_OBJ_RESET_VALUES",
+  "%Name":"obj_camera",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"_OBJ_RESET_VALUES",
+  "name":"obj_camera",
   "overriddenProperties":[],
   "parent":{
-    "name":"InitSystem",
-    "path":"folders/ImportedAssets/InitSystem.yy",
+    "name":"CustomCameraSystem",
+    "path":"folders/ImportedAssets/CustomCameraSystem.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,11 +26,7 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"FirstRoom","filters":[
-        "GMRoom",
-      ],"listItems":[],"multiselect":false,"name":"FirstRoom","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

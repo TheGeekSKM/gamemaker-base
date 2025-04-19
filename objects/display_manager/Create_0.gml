@@ -11,5 +11,5 @@ windowed_width    = DISPLAY_DEFAULT_WINDOWED_WIDTH;
 windowed_height   = DISPLAY_DEFAULT_WINDOWED_HEIGHT;
 window_fullscreen = DISPLAY_DEFAULT_FULLSCREEN;
 
-window_resize(false);
+window_resize(true);
 gpu_set_tex_filter(DISPLAY_DEFAULT_TEXTURE_FILTERING);

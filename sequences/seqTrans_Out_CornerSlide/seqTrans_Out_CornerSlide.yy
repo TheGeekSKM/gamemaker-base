@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"v1",
+  "$GMSequence":"",
   "%Name":"seqTrans_Out_CornerSlide",
   "autoRecord":true,
   "backdropHeight":450,
