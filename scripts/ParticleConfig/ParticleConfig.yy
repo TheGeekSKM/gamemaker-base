@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ParticleConfig",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ParticleConfig",
+  "parent":{
+    "name":"ConfigStructs",
+    "path":"folders/ImportedAssets/FeedbackSystems/ConfigStructs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

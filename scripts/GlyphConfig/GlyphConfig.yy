@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GlyphConfig",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GlyphConfig",
+  "parent":{
+    "name":"ConfigStructs",
+    "path":"folders/ImportedAssets/FeedbackSystems/ConfigStructs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
