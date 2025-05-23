@@ -153,12 +153,3 @@ if (trail_update_timer <= 0) {
     }
 }
 
-if (crossedBarier)
-{
-    timePlaying++;
-}
-
-if ((x >= 305) && !crossedBarier)
-{
-    crossedBarier = true;
-}

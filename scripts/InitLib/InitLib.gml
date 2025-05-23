@@ -12,7 +12,7 @@ function LoaderSystem() : __loaderBase() constructor
         // load persistent camera
 
         randomize();
-        instance_create_depth(0, 0, -1600, display_manager);
+        //instance_create_depth(0, 0, -1600, display_manager);
         instance_create_depth(0, 0, -1600, obj_FeedbackManager);
 
         return true;

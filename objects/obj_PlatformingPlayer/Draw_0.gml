@@ -64,7 +64,8 @@ if (_list_size > 1) {
 
 if (attackPrimaryCooldown > 0)
 {
-    draw_sprite_ext(spr_attackCircle, 0, x, y, 1, 1, 0, c_white, attackPrimaryCooldown / attackPrimaryCooldownMax);
+    // placeholder attack art
+    //draw_sprite_ext(spr_attackCircle, 0, x, y, 1, 1, 0, c_white, attackPrimaryCooldown / attackPrimaryCooldownMax);
 }
 
 draw_self();

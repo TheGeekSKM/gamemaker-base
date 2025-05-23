@@ -7,7 +7,7 @@ if (abs(hsp) + abs(vsp) > speedThreshold)
     if (trailCooldown <= 0)
     {
         trailCooldown = 1;
-        var t = instance_create_depth(x, y, depth + 1, OBJ_TrailSegment);
+        var t = instance_create_depth(x, y, depth + 1, obj_TrailSegment);
         
         t.xPrev = x - hsp;
         t.yPrev = y - vsp;
