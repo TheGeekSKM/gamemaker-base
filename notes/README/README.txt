@@ -47,4 +47,26 @@ var glyph_cfg_coin = new GlyphConfig()
     .SetDuration(60);
 
 global.FeedbackManager.SpawnGlyph(x,y, glyph_cfg_coin);
+
+
+// --- Fracture Effect Example (when an object 'obj_Target' is hit) ---
+// In obj_Target's Destroy event or when it takes lethal damage:
+
+var my_fracture_config = new FracturePieceConfig()
+     .SetOriginalObjectVisuals(sprite_index, image_index) 
+     .SetPieceAppearance(true, spr_chunk, 0.3, 0.7) 
+     .SetPieceCount(8, 15)                          
+     .SetPieceLifetime(150)                         
+     .SetPiecePhysics(0.25, 0.01, 0.3, 0.25)        
+     .SetPieceInitialSpeed(2, 6)                    
+     .SetPieceRotationSpeed(-10, 10)                
+     .SetGroundBehavior(true, true, 45)             
+     .SetSolidObject(obj_Solid);                    
+
+if (instance_exists(global.FeedbackManager)) 
+{
+    global.FeedbackManager.spawn_fracture_effect(x, y, my_fracture_config);
+}
+instance_destroy(); // Destroy the original obj_Target
+
 ```

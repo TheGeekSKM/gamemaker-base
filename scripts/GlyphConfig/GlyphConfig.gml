@@ -16,7 +16,8 @@ enum FadeStyle
 enum InstanceType
 {
     PARTICLE,
-    GLYPH
+    GLYPH,
+    FRACTURE_PIECE
 }
 
 function GlyphConfig() constructor {

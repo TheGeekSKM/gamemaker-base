@@ -11,6 +11,8 @@ if (!layer_exists("Feedback"))
 }
 
 for (var i = 0; i < maxParticles; i++) {
+    if (!layer_exists("Instances")) layer_create(-50, "Instances");
+    
     var inst = instance_create_layer(0, 0, "Instances", obj_PooledParticle); 
     ds_list_add(poolParticlesAll, inst);
     ds_list_add(poolParticlesInactive, inst);
@@ -23,9 +25,25 @@ poolGlyphsAll = ds_list_create();
 maxGlyphs = 50; 
 
 for (var i = 0; i < maxGlyphs; i++) {
+    if (!layer_exists("Instances")) layer_create(-50, "Instances");    
+    
     var inst = instance_create_layer(0, 0, "Instances", obj_PooledGlyph); 
     ds_list_add(poolGlyphsAll, inst);
     ds_list_add(poolGlyphsInactive, inst);
+    instance_deactivate_object(inst);
+}
+
+// --- Fracture Pool ---
+poolFracturePiecesInactive = ds_list_create();
+poolFracturePiecesAll = ds_list_create();
+maxFracturePieces = 100; // Adjust as needed
+
+for (var i = 0; i < maxFracturePieces; i++) {
+    if (!layer_exists("Instances")) layer_create(-50, "Instances");    
+    
+    var inst = instance_create_layer(0, 0, "Instances", obj_FracturePiece); // Ensure obj_FracturePiece exists
+    ds_list_add(poolFracturePiecesAll, inst);
+    ds_list_add(poolFracturePiecesInactive, inst);
     instance_deactivate_object(inst);
 }
 
@@ -101,12 +119,51 @@ function SpawnGlyph(xPos, yPos, config)
     if (inst.object_index == obj_PooledGlyph) 
     {
         instance_activate_object(inst);
-        inst.activate(xPos, yPos, config);
+        inst.Activate(xPos, yPos, config);
     } 
     else if (inst != undefined) 
     {
         show_debug_message("Error: Pooled instance is not obj_PooledGlyph. ID: " + string(inst));
         if (instance_exists(inst)) instance_destroy(inst);
+    }
+}
+
+
+/// @function           SpawnFractureEffect(xPos, yPos, config)
+/// @description        Spawns a fracture effect, creating multiple pieces.
+/// @param {real} xPos    X position of the original object.
+/// @param {real} yPos    Y position of the original object.
+/// @param {struct} config Configuration for the fracture (instance of FracturePieceConfig).
+function SpawnFractureEffect(xPos, yPos, config) {
+    var _num_pieces = irandom_range(config.numPiecesMin, config.numPiecesMax);
+    
+    for (var i = 0; i < _num_pieces; i++) 
+    {
+        var inst = undefined;
+        if (ds_list_size(poolFracturePiecesInactive) > 0) 
+        {
+            inst = ds_list_find_value(poolFracturePiecesInactive, 0);
+            ds_list_delete(poolFracturePiecesInactive, 0);
+        } 
+        else 
+        {
+            inst = instance_create_layer(xPos, yPos, "Instances", obj_FracturePiece);
+            ds_list_add(poolFracturePiecesAll, inst);
+            show_debug_message("Fracture piece pool empty, created new piece.");
+        }
+
+        if (inst.object_index == obj_FracturePiece) 
+        {
+            instance_activate_object(inst);
+            
+            // Pass the main config, the piece will pick what it needs and randomize internally
+            inst.Activate(xPos, yPos, config); 
+        } 
+        else if (inst != undefined) 
+        {
+            show_debug_message("Error: Pooled instance is not obj_FracturePiece. ID: " + string(inst));
+            if (instance_exists(inst)) instance_destroy(inst);
+        }
     }
 }
 
@@ -134,6 +191,10 @@ function ReturnInstanceToPool(instanceID, type)
         
         case InstanceType.GLYPH:
             ds_list_add(poolGlyphsInactive, instanceID);
+            break;
+        
+        case InstanceType.FRACTURE_PIECE:
+            ds_list_add(poolFracturePiecesInactive, instanceID);
             break;
         
         default:
