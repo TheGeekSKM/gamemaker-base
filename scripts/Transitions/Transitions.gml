@@ -13,7 +13,7 @@ function TransitionPlace(_type)
     if (layer_exists("transition")) layer_destroy("transition"); 
     var _layer = layer_create(-9999, "transition");
     
-    layer_sequence_create(_layer, camX, camY, _type);
+    layer_sequence_create(_layer, 0, 0, _type);
 }
 
 function Transition(_roomTarget, _typeOut, _typeIn)
